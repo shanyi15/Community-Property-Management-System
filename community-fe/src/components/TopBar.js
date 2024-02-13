@@ -7,12 +7,20 @@ import { Menu, Button } from 'antd';
 
 const items = [
     {
-        label: 'Dashboard',
+        label: (
+          <a href="./dashboard" target="_self">
+            Dashboard
+          </a>
+        ),
         key: 'dashboard',
         className: 'menu-item',
     },
     {
-        label: 'Payment',
+        label: (
+          <a href="./payment" target="_self">
+          Payment
+        </a>
+        ),
         key: 'payment',
         className: 'menu-item',
     },
@@ -32,7 +40,11 @@ const items = [
         ],
     },
     {
-        label: 'Posts',
+        label: (
+          <a href="./posts" target="_self">
+          Posts
+          </a>
+        ),
         key: 'posts',
         className: 'menu-item',
     },
@@ -53,8 +65,14 @@ const TopBar = () => {
 
         <header className="header">
             <span className="title">EasyLife</span>
-            <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items}
-                  className="menu"/>
+            <Menu 
+              onClick={onClick} 
+              selectedKeys={[current]} 
+              mode="horizontal" 
+              items={items}
+              className="menu"
+            />
+
             <div className="buttons">
                 <LogoutOutlined className="logout-button" onClick={() => {setIsLoggedIn(false)}}/>
             </div>
@@ -62,9 +80,12 @@ const TopBar = () => {
         :
         <header className="header">
             <span className="title">EasyLife</span>
-            <div className="not-logged-in-buttons">
-                <Button type="text" className="sign-up-button">Sign Up</Button>
+            <div className="not-logged-in-buttons-1">
+                <Button type="text" className="sign-in-button" href='./login' target="_self">Sign In</Button>
             </div>
+            <div className="not-logged-in-buttons-2">
+                <Button type="text" className="sign-up-button" href='./register' target="_self">Sign Up</Button>
+            </div>            
         </header>
     )
 };

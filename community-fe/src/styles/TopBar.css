@@ -1,4 +1,4 @@
-.title {
+/* .title {
     text-align: left;
     font-weight: bold;
     font-size: 30px;
@@ -9,7 +9,7 @@
 
 .menu {
     width: 600px;
-    background-color: skyblue;
+    background-color: #7e0acb;
 }
 
 .menu-item {
@@ -26,7 +26,7 @@
     height: 50px;
     position: fixed;
     width: 100%;
-    background-color: skyblue;
+    background-color: #7e0acb;
 }
 
 .buttons {
@@ -42,10 +42,16 @@
     padding-left: 20px;
 }
 
-.not-logged-in-buttons {
+.not-logged-in-buttons-1 {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+}
+
+.not-logged-in-buttons-2 {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .sign-up-button {
@@ -53,4 +59,4 @@
     margin-right: 20px;
     color: floralwhite;
 }
-
+ */
